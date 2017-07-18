@@ -1,7 +1,7 @@
 # WHBLEDemo
 CoreBluetooth central and peripheral demo (iOS蓝牙中心设备和外设开发)
 
-iOS蓝牙开发基础请到这里查阅：Read
+iOS蓝牙开发基础请到这里查阅：**[iOS蓝牙开发介绍](http://www.jianshu.com/p/38a4c6451d93)**
 
 ## 目的
 
@@ -43,7 +43,4 @@ iOS的蓝牙开发是围绕着CoreBluetooth框架来实现的。
 
 > UUID：区分不同的服务和特征，可以理解为服务和特征的身份证。我们可以用UUID来挑选需要的服务和特征。
 
-
-CoreBluetooth框架
-实现iOS蓝牙外设
-实现iOS蓝牙中心设备
+**[CoreBluetooth框架 实现iOS蓝牙外设 实现iOS蓝牙中心设备](http://www.jianshu.com/p/38a4c6451d93)**
