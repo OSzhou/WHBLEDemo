@@ -55,7 +55,9 @@ extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
             print("未启动")
         case .poweredOn:
             print("可用")
+              
             central.scanForPeripherals(withServices: [CBUUID.init(string: Service_UUID)], options: nil)
+//            central.scanForPeripherals(withServices: nil, options: nil)
         }
     }
     
@@ -66,6 +68,7 @@ extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
 //        if (peripheral.name?.hasPrefix("WH"))! {
 //            central.connect(peripheral, options: nil)
 //        }
+        print("peripheral name --- \(peripheral.name ?? "外围设备名为nil")")
         central.connect(peripheral, options: nil)
     }
     
@@ -95,7 +98,8 @@ extension ViewController: CBCentralManagerDelegate, CBPeripheralDelegate {
         //本例的外设中只有一个服务
         let service = peripheral.services?.last
         // 根据UUID寻找服务中的特征
-        peripheral.discoverCharacteristics([CBUUID.init(string: Characteristic_UUID)], for: service!)
+        guard let s = service else { return }
+        peripheral.discoverCharacteristics([CBUUID.init(string: Characteristic_UUID)], for: s)
     }
     
     /** 发现特征 */

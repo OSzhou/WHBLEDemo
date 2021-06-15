@@ -50,7 +50,7 @@ extension ViewController: CBPeripheralManagerDelegate {
             // 创建Service（服务）和Characteristics（特征）
             setupServiceAndCharacteristics()
             // 根据服务的UUID开始广播
-            self.peripheralManager?.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [CBUUID.init(string: Service_UUID)]])
+            self.peripheralManager?.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [CBUUID.init(string: Service_UUID)]])// , CBAdvertisementDataLocalNameKey: "peripheral iPhoneX"]
         }
     }
     
